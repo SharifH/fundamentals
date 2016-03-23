@@ -55,4 +55,4 @@ var someFunc = function(x) {
 
 
 ---
-[Let's apply what we've learned about Functions to our 'Rock, Paper, Scissors' project.](09_assessment.md)
+[Let's apply what we've learned about Functions to our 'Rock, Paper, Scissors' project.](14_assessment.md)

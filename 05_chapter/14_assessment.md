@@ -74,4 +74,4 @@ var board = document.getElementsByClassName('board')[0];
 Once you're happy with your work, save your code and make a commit to your project's repository.
 
 ---
-[Next up: Chapter 6](../05_chapter/intro.md)
+[Next up: Chapter 6](../06_chapter/intro.md)

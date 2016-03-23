@@ -43,4 +43,4 @@ If you're satisfied that your code is working as expected, go ahead and move on 
 
 ---
 
-Feeling confident? [Test your understanding of functions with this next quiz.](06_quiz.md)
+[Next: Dynamically Accessing and Updating Content](08_lesson.md)

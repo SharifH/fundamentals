@@ -6,8 +6,11 @@
 * Define a function with one or more parameters
 * Execute a function within a program or in the console
 * Given a function and a set of arguments, predict the output of a function
+* Use selectors and methods to access and update the DOM
 
 ---
+
+# Functions
 
 You've had an opportunity to see some functions in the homework assignments at the end of units 3 and 4; now it's time to learn about writing them!
 

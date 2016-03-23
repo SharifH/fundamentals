@@ -75,7 +75,7 @@ To create a copy of Joyent's repo, you would need to **fork** it by clicking the
 ![Forking GIF](../assets/chapter2/fork_node.gif)
 
 
-> **CAUTION** Don't follow these steps just yet. Read this chapter and then you'll have a chance to try it out yourself in the [Unit 2 Homework](09_assessment.md).
+> **CAUTION** Don't follow these steps just yet. Read this chapter and then you'll have a chance to try it out yourself in the [Unit 2 Homework](14_assessment.md).
 
 "Forking" adds a copy of someone else's GitHub repo to *your* Github account.
 
