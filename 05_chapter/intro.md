@@ -38,4 +38,41 @@ We could figure out that the relationship between `x` and `f(x)` is that the out
 
 Functions play a similar role in programming – JS Functions, like mathematical functions, perform transformations. They take input values and return an output value.
 
+# The Document Object Model
+
+In previous units, we've relied on `console.log` and `alert` to give feedback to users. In a real-life application, however, we'll want to provide more meaningful feedback and make our pages more "user friendly" by allowing users to interact with our site and see the contents of a web page updated in real time.
+
+When a browser loads a web page, it grabs the page's HTML and creates a model of the page in memory. We can then use JavaScript to access and update the content of this model. When the model is updated, the changes are reflected on screen.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+</head>
+<body>
+	<h1>Things To Do</h1>
+	<p></p>
+	<ul>
+		<li>Call Mom</li>
+		<li>Take out the trash</li>
+		<li>Return library books</li>
+	</ul>
+	
+</body>
+</html>
+```
+
+
+
+html page - nesting and relationships
+
+
+
+
+
+
+The Document Object Model (DOM) specifies how browsers should create a model of an HTML page and how we can use a scripting language, such as JavaScript, to access and update the contents of a page.
+
+
 [Let's take a look.](02_lesson.md)
