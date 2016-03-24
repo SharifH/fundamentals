@@ -72,6 +72,7 @@ Create your cards using images of your choice. Your memory game could consist of
   width: 150px;
   border-radius: 10px; /* give the divs card-like rounded corners */
   border: 1px solid black;
+  background-size: cover;
 }
 ```
 
@@ -99,4 +100,4 @@ h2 {
 
 Great! Your website is starting to look more and more like an actual memory game!
 
-![](https://s3.amazonaws.com/f.cl.ly/items/0n1W1M2d0y3f1Q2V1T16/Image%202016-03-17%20at%208.44.47%20AM.png?v=cc378882)
+![](https://s3.amazonaws.com/f.cl.ly/items/1k350M1y1f2C3z2y283c/Image%202016-03-23%20at%208.20.24%20PM.png?v=7e375abf)
