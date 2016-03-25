@@ -68,7 +68,7 @@ This HTML page is simply a text document written in a language the browser under
 
 The browser pulls in this HTML document, parses it, and creates an object model of the page in memory. This model is called the **Document Object Model (DOM)**. 
 
-The DOM uses a **DOM Tree** to specify the way in which the browser should structure this model:
+The DOM specifies that the browser should use a **DOM Tree** to structure this model:
 
 <br>
 <center><img src="../assets/chapter5/dom.png"></center>
@@ -76,8 +76,8 @@ The DOM uses a **DOM Tree** to specify the way in which the browser should struc
 
 Each element in the HTML document is represented by a **DOM node**. You can think of a node as a live **object** that you can access and change using JavaScript. When the model is updated, the changes are reflected on screen.
 
-We can get and set attributes for these nodes (perhaps we want to add a class or update styling). We can access and change the content (maybe we want to change the text in the third `li` to read "Return library books - DONE!"). Or we can even add new nodes or remove nodes from the page.
+We can get and set attributes for these nodes – perhaps we want to add a class or update styling to make an item fade in or out. We can access and change the content – maybe we want to change the text in the third `li` to read "Return library books - DONE!" Or we can even add new nodes or remove nodes from the page.
 
-Once we get some functions under our belt we'll take a look at how we can use some of JavaScript's "built-in" functions to interact with the DOM.
+Once we get some functions under our belt we'll take a look at how we can use some of JavaScript's "built-in" functions to interact with the DOM and add some more complex interactions to our sites.
 
 Ready to dig in? [Let's take a look at functions.](02_lesson.md)
