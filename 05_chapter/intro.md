@@ -38,19 +38,19 @@ We could figure out that the relationship between `x` and `f(x)` is that the out
 
 Functions play a similar role in programming – JS Functions, like mathematical functions, perform transformations. They take input values and return an output value.
 
+
+
 # The Document Object Model
 
-In previous units, we've relied on `console.log` and `alert` to give feedback to users. In this unit we'll look at how we can provide more meaningful feedback and make our sites more "user friendly" by allowing users to interact with our site and see its contents updated in real time.
+In previous units, we've relied on `console.log` and `alert` to give feedback to users. Later in this unit we'll look at how we can provide more meaningful feedback and make our sites more "user friendly" by allowing users to interact with our site and see its contents updated in real time.
 
-When a browser loads a web page, it grabs the HTML for the page and creates a model of the page in memory. This model is called the **Document Object Model (DOM)**. We can use JavaScript to access and change the content of this model. When the model is updated, the changes are reflected on screen.
-
-In an HTML document, elements can be nested inside of other elements. In the example below, we have three `<li>` elements that are enclosed within an opening `<ul>` tag and closing `</ul>` tag.
-
+Let's take a look at the following HTML page:
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>To Do List</title>
 </head>
 <body>
@@ -60,27 +60,24 @@ In an HTML document, elements can be nested inside of other elements. In the exa
 		<li>Take out the trash</li>
 		<li>Return library books</li>
 	</ul>
-	
 </body>
 </html>
 ```
 
-In programming, relationships between the document and elements are often described in similar terms as one would use to describe a family tree.
+This HTML page is simply a text document written in a language the browser understands. It uses opening and closing tags to provide structure and give meaning to the content of the page.
 
-In the above example we could describe the relationship between the `<ul>` element and the three `<li>` elements as that of parent and children since the `<li>` elements are wrapped by the `<ul>` element.
+The browser pulls in this HTML document, parses it, and creates an object model of the page in memory. This model is called the **Document Object Model (DOM)**. 
 
-The relationships between the document and elements in the can be represented using a tree structure:
+The DOM uses a **DOM Tree** to specify the way in which the browser should structure this model:
 
 <br>
 <center><img src="../assets/chapter5/dom.png"></center>
 <br>
 
+Each element in the HTML document is represented by a **DOM node**. You can think of a node as a live **object** that you can access and change using JavaScript. When the model is updated, the changes are reflected on screen.
 
-This representation is referred to as the **DOM Tree**. Each element in the HTML is represented by a **DOM node**.
+We can get and set attributes for these nodes (perhaps we want to add a class or update styling). We can access and change the content (maybe we want to change the text in the third `li` to read "Return library books - DONE!"). Or we can even add new nodes or remove nodes from the page.
 
-Each of these nodes is an **object** that can be interacted with using JavaScript. We can get and set attributes for these nodes (perhaps we want to add a class or update styling). We can access and change the content (maybe we want to change the text in the third `li` to read "Return library books - DONE!"). Or we can even add or remove nodes from the page.
+Once we get some functions under our belt we'll take a look at how we can use some of JavaScript's "built-in" functions to interact with the DOM.
 
-
-
-
-[Let's take a look.](02_lesson.md)
+Ready to dig in? [Let's take a look at functions.](02_lesson.md)

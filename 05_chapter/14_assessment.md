@@ -2,14 +2,7 @@
 
 Your code is slowly but surely starting to get more robust. To better organize the code you've already written, as well as prepare for the code you will write, now, we will take the time to structure the program using functions. Further, using what you've learned about iterating with loops, you will also dynamically create your cards into HTML.
 
-JavaScript comes with several "built-in" functions that we can call on using dot notation. These functions are no different than the functions we just covered, but they are more commonly known as _methods_.
-
 For example, let's look at `document.createElement('div')` which creates an HTML `div` element (a `div` will come to visually represent a card in the browser).
-
-- `document` is a readily available JS object. (An object is basically an associative array It stores key-value pairs, and unlike arrays, is not ordered).  
-- `createElement` is the method it comes with
-  - This method performs the functionality of creating a new HTML element.
-  - Just like with the functions we've learned about, we can pass in arguments for these methods to use.
 
 In this case, we passed `createElement` and argument of `'div'` so a `div` element is created. If you'd like, you can go ahead and run that line of code, `document.createElement('div')`, in your browser's console to get see it in action.
 
