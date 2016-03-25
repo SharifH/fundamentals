@@ -47,8 +47,6 @@
       * [Exercise](05_chapter/07_exercise.md)  
 	* [Manipulating the DOM](05_chapter/08_lesson.md)
       * [Exercise](05_chapter/09_exercise.md)  
-	* [Problem Solving with Functions](05_chapter/10_lesson.md)
-      * [Exercise](05_chapter/11_exercise.md)  
 	* [Quiz](05_chapter/12_quiz.md)
 	* [Cheat Sheet](05_chapter/13_cheatsheet.md)
 	* [Unit 5 Homework](05_chapter/14_assessment.md)
