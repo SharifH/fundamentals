@@ -4,7 +4,7 @@
 
 ##![Your Turn](../assets/exercise.png) Your Turn
 
-Here's the [starter code](https://jsfiddle.net/24b0uy1s/) for your next exercise.
+Here's the [starter code](https://jsfiddle.net/048zpmy3/1/) for your next exercise.
 
 In this exercise we're going to practice manipulating the DOM by updating our Reading List site, which is a little outdated.
 
