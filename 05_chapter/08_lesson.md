@@ -1,7 +1,9 @@
 **WDI Fundamentals Unit 5**
 
 ---
-#A Closer Look at the DOM
+#Manipulating the DOM
+
+## A Closer Look at the DOM
 
 We mentioned before that when a browser retrieves the HTML for a page it makes a model of that page in memory. This model is called the DOM.
 
@@ -58,20 +60,15 @@ JavaScript comes with some "built-in" functions that will allow us to access and
 
 Let's take a look at some of the methods we have available to us!
 
-
-#Manipulating the DOM
-
 ##Accessing Elements
 
-First things first! Before we can work with an element, we first need to *find* the DOM node that represents the element that we want to work with.
+First things first! Before we can work with an element, we first need to find, or *select* the DOM node that represents the element that we want to work with.
 
 In order to find an element, we need to search through the document for that element. The syntax for searching for an element looks something like this:
 
 ```js
 document.getElementById('main')
 ```
-
-Let's break this down.
 
 * `document` - Refers to the document object. Any time we want to find an element or elements, we'll need to access them through the document object. This will allow us to search the entire page for an element.
 
@@ -80,6 +77,9 @@ Let's break this down.
 * `getElementById()` - This is the method we want to use to find an element. We'll take a look at the methods that are available to us shortly. This method in particular lets us locate an element by the value of its `id` attribute.
 
 * `'main'` - Just like with the functions we've learned about earlier in this unit, we can pass in parameters for these methods to use. In this case, we want to find an element that has an `id` of `main`.
+
+> **NOTE** Note that using proper syntax here is important! These methods are case sensitive. `getElementByID` (with a capital D) will throw an error and will not work.
+
 
 ###Selecting an Individual Element
 
@@ -90,6 +90,8 @@ There are a couple of methods we can use to find an individual element.
 ####`getElementById()`
 
 The fastest route to finding any single element is `getElementById()`. Since `id`s are unique, meaning two elements cannot have the same value for an `id` attribute in any given HTML page, this query will allow us to quickly find an individual element.
+
+HTML:
 
 ```html
 <div id="sidebar">
@@ -102,23 +104,32 @@ The fastest route to finding any single element is `getElementById()`. Since `id
 </div>
 ```
 
+
+JavaScript:
+
 ```js
 document.getElementById('sidebar')
 ```
-In the above example, we are finding the element that has an `id` of `sidebar`.
+This will find the element that has an `id` of `sidebar`.
 
-
+---
 
 ####`querySelector()`
 
-This method is a recent addition to the DOM and is not supported by older browsers. It's handy because it allows us to use our CSS selector syntax to find an element. If there are multiple elements on the page that match the selector, it will return the first of the matching elements.
+This method allows us to use our CSS selector syntax to find an element. If there are multiple elements on the page that match the selector, it will return the *first* of the matching elements. It is important to note that this a recent addition to the DOM and is not supported by older browsers.
 
 ```js
 document.querySelector('.special')
 ```
 
-This will return the first element that has a `class` of `special`. You can use any of your CSS-style selectors as a parameter. 
+This will return the first element on the page that has a `class` of `special`. You can use any of your CSS-style selectors as a parameter. 
 
+Other examples:
+
+```js
+document.querySelector('#sidebar') // This will find the element that has an id of sidebar.
+document.querySelector('ul > li') // This will find the first li that is a direct child of the ul.
+```
 
 
 ###Selecting Multiple Elements
@@ -142,6 +153,7 @@ For each example below, you can use this HTML snippet as a reference:
 </div>
 ```
 
+___
 
 ####`document.getElementsByClassName()`
 
@@ -152,6 +164,7 @@ document.getElementsByClassName('special')
 ```
 This will return any elements that have the class `special`. In the above example, this will return a NodeList containing the second and third list items, since they both have the class `special`.
 
+---
 
 
 ####`document.getElementsByTagName()`
@@ -162,6 +175,8 @@ This method will locate all elements that match a given tag name.
 document.getElementsByTagName('li')
 ```
 Here, this query will return all `<li>` elements. In the case, the NodeList will contain all seven `<li>`.
+
+___
 
 
 
@@ -174,13 +189,15 @@ document.querySelectorAll('.special')
 ```
 This will return any elements that have the class `special`. In the above example, this will return a NodeList containing the second and third list items, since they both have the class `special`.
 
+___
+
 ####Working with NodeLists
 
-Any time there is the *potential* for a method to return more than one element, such as with `getElementsByClassName()`, `getElementsByTagName()`, and `querySelectorAll`, a NodeList will be returned.
+Any time there is even the *potential* for a method to return more than one element, such as with `getElementsByClassName()`, `getElementsByTagName()`, and `querySelectorAll`, a NodeList will be returned, *even if only one element is found that matches the query*.
 
-These NodeLists are **collections** that are numbered similar to the arrays we looked at in Unit 2.
+These NodeLists are **collections** that are numbered similar to the arrays we will be looking at in Unit 6.
 
-We can select a single item to work from using array syntax (our trusty square brackets).
+When we get this list, we can select a single item from that list to work with using array syntax – a set of square brackets.
 
 For example, above we saw that `document.getElementsByTagName('li')` returned seven list items. The NodeList that was returned would look like this:
 
@@ -194,12 +211,15 @@ For example, above we saw that `document.getElementsByTagName('li')` returned se
 | 5   | `<li>Saturday</li>`  |
 | 6      | `<li>Sunday</li>`  |
 
-		
+Note how each node has an index associated with it. These indexes are *zero based* – meaning the first node has an index of 0, the second node an index of 1, etc.
+
+
 To locate the fourth item in that NodeList, `<li>Thursday</li>`, we could use the following syntax:
 
 ```js
 document.getElementsByTagName('li')[3].className = 'special'
 ```
+Directly after the `getElementsByTagName('li')` we have the index number of the item we want to locate within square brackets, `[3]`, which would locate the item at index 3.
 
 This would find the fourth list item and change the class attribute to `special` (we'll take a look at the className method shortly).
 
@@ -256,7 +276,7 @@ This method will locate the parent of an initial selection.
 ```js
 Document.getElementsByTagName('li')[0].parentNode() 
 ```
-THis will return the parent of the first `<li` element, which, in this case, is the `<ul>` element since it wraps all the `<li` elements.
+THis will return the parent of the first `<li>` element, which, in this case, is the `<ul>` element since it wraps all the `<li` elements.
 
 Other methods available to us include:
 * `previousSibling()` – This will find the previous sibling of a selected element.
@@ -277,6 +297,7 @@ In the following examples, we'll be using this HTML page as a reference:
 <head>
 	<meta charset="utf-8">
 	<title>To Do List</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<h1>Things To Do</h1>
@@ -297,7 +318,7 @@ Which will look like this when it is first loaded into the browser:
 
 ### Accessing and Updating Content
 
-There are many properties and methods that allow us to read from or update the contents of a DOM node. Let's take a look at a few:
+There are lots of properties and methods that allow us to read from or update the contents of a DOM node. Let's take a look at a couple now and then we'll expand upon these in the next lesson.
 
 ####**`innerHTML`**
 
@@ -306,7 +327,7 @@ We can use the `innerHTML` property to get and set content for an element.
 For example, if we want to change the HTML content for the first `<li>`, we could execute the following:
 
 ```js
-document.getElementsByTagName('li')[0].innerHTML = Email <a href="mom@gmail.com">Mom</a>.';
+document.getElementsByTagName('li')[0].innerHTML = 'Email <a href="mom@gmail.com">Mom</a>.';
 ```
 This would find the first `<li>` and change the HTML content to `Email <a href="mom@gmail.com">Mom</a>.` The result will look like this:
 
@@ -334,82 +355,6 @@ This code would change the text content of the `<li>` that has the id `important
 <center><img src="../assets/chapter5/text_content.png"></center>
 <br>
 
-####**`createElement()` and `appendChild()`**
-
-To add new elements to the page, we'll use a three step process.
-
-1. We will use the `createElement()` method to create a new element, which can then be added to the page. When this node is created, it will be empty. This element will be stored in a variable
-2. We will then add content to the element using the `innerHTML` or `textContent` properties we looked at above.
-3. Now that our element has been created we can add it as a child of an element using the `appendChild()` method.
-
-To add a fourth item to our list we can execute the following code:
-
-```js
-// First up, let's create a new list item and store it in a variable.
-var newListItem = document.createElement('li');
-
-// Alright! Now let's update the text content of that list item.
-newListItem.textContent = 'Feed the cat';
-
-// And Finally...let's add that list item as a child of the ul.
-document.getElementsByTagName('ul')[0].appendChild(newListItem);
-
-```
-<br>
-<center><img src="../assets/chapter5/append_child.png"></center>
-<br>
-
-It takes a few steps but you'll get the hang of it in no time.
-
-### Getting and Setting Attributes
-
-We might also want to update styles and attributes for elements on the page. We can do so using the following properties and methods:
-
-####`className`
-We can change the value of a class attribute for an element using the `className` property. This will apply any styles in our CSS that are associated with that particular class.
-
-For example, maybe we want to highlight an important task in our list. We can add a class and styles in our CSS like so:
-
-```css
-.highlight {
-	background-color: yellow;
-}
-```
-
-And then we can use JavaScript to add this class:
-
-```js
-document.getElementById('important').className = 'highlight';
-
-```
-
-The `.highlight` class will then be added to the element with the id `important` and the background-color associated with this class will be applied:
-
-<br>
-<center><img src="../assets/chapter5/class_name.png"></center>
-<br>
-
-####`setAttribute()`, `removeAttribute()`
-
-We can set and remove attributes from elements using the `setAttribute()` and `removeAttribute()` methods.
-
-For example, if we want to update the `href` attribute on an anchor, we could do the following: 
-
-```js
-document.getElementsByTagName('a')[0].setAttribute('href', 'http://newurl.com');
-
-```
-
-Or if I wanted to remove an id from an element I could execute the following:
-
-```js
-document.getElementsByTagName('a')[0].removeAttribute('id');
-
-```
-
-#Conclusion
-
-Phew! There are so many properties and methods that it can be overwhelming at first! The important thing at this stage is that you understand how things work and know what tools are available to you. Memorization comes with practice!
 
 ---
 
