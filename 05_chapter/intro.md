@@ -64,8 +64,6 @@ Let's take a look at the following HTML page:
 </html>
 ```
 
-This HTML page is simply a text document written in a language the browser understands. It uses opening and closing tags to provide structure and give meaning to the content of the page.
-
 The browser pulls in this HTML document, parses it, and creates an object model of the page in memory. This model is called the **Document Object Model (DOM)**. 
 
 The DOM specifies that the browser should use a **DOM Tree** to structure this model:
@@ -74,10 +72,10 @@ The DOM specifies that the browser should use a **DOM Tree** to structure this m
 <center><img src="../assets/chapter5/dom.png"></center>
 <br>
 
-Each element in the HTML document is represented by a **DOM node**. You can think of a node as a live **object** that you can access and change using JavaScript. When the model is updated, the changes are reflected on screen.
+Each element in the HTML document is represented by a **DOM node**. You can think of a node as a *live object* that you can access and change using JavaScript. When the model is updated, those changes are reflected on screen.
 
-We can get and set attributes for these nodes – perhaps we want to add a class or update styling to make an item fade in or out. We can access and change the content – maybe we want to change the text in the third `li` to read "Return library books - DONE!" Or we can even add new nodes or remove nodes from the page.
+We can get and set attributes for these nodes – perhaps we want to add a class or update styling to change the background color for an element. We can access and change the content – maybe we want to change the text in the third `li` to read "Return library books - DONE!" Or we can even add new nodes to or remove nodes from the page.
 
-Once we get some functions under our belt we'll take a look at how we can use some of JavaScript's "built-in" functions to interact with the DOM and add some more complex interactions to our sites.
+Once we get some functions under our belt we'll take a look at how we can use some of JavaScript's "built-in" functions to interact with the DOM and add more complex interactions to our sites.
 
 Ready to dig in? [Let's take a look at functions.](02_lesson.md)

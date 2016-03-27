@@ -10,6 +10,7 @@ In this exercise we're going to practice manipulating the DOM by updating our Re
 
 For now, we'll run our JavaScript to update the DOM when the page loads. In the next lesson we'll take a look at how we can update the page based on the user's actions. Maybe we'll add a list item when the user clicks on a button. Or maybe we'll remove a list item when the user clicks on an 'X' icon.
 
+
 Instructions
 
 1. Let's get started! Some starter code has been provided in jsfiddle for this exercise.

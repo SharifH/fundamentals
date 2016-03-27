@@ -1,19 +1,69 @@
 **WDI Fundamentals Unit 5**
 
 ---
-#Manipulating the DOM
+#A Closer Look at the DOM
 
-We mentioned before that when a browser retrieves the HTML for a page it makes a model of that page in memory. This model is called the DOM and each element in the HTML document is represented by a DOM node — an object that can be interacted with using JavaScript.
+We mentioned before that when a browser retrieves the HTML for a page it makes a model of that page in memory. This model is called the DOM.
 
 <br>
 <center><img src="../assets/chapter5/dom.png"></center>
 <br>
 
+The DOM is a *language independent* model of the page. It is not a part of HTML or JavaScript, but follows a separate set of rules.
+
+The difference between HTML and the DOM can often be a little hard to grasp for those just starting out in programming. An HTML page is simply a text document written in a language the browser understands. It uses opening and closing tags to provide structure and give meaning to the content of the page.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>To Do List</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Things To Do</h1>
+	<ul>
+		<li>Call Mom</li>
+		<li>Take out the trash</li>
+		<li>Return library books</li>
+	</ul>
+</body>
+</html>
+```
+
+The browser retrieves this document and creates a model of the page in memory. Most modern browsers come with tools that developers can use to take a look at the DOM structure.
+
+In Chrome, you can go to *View* > *Developer* > *Developer Tools* and click on the *Elements* panel to take a look at the DOM tree.
+
+<br>
+<center><img src="../assets/chapter5/opening_dev_tools.png"></center>
+<br>
+
+<br>
+<center><img src="../assets/chapter5/dev_tools_dom.png"></center>
+<br>
+
+You might notice that, at this point, the DOM closely resembles our original HTML document. However, this is a *living* model of the page, made up of node objects that can be manipulated with JavaScript. 
+
+Maybe we want to use JavaScript to add a fourth list item to the page – "Feed the Cat." Then perhaps we want to change the background-color of the first list item to yellow using JavaScript. And lastly, maybe we want to change the text content of the third list item to "Return library books - DONE!"
+
+Now the DOM is looking pretty different from our original HTML file.
+
+<br>
+<center><img src="../assets/chapter5/dom_updated.png"></center>
+<br>
+
 JavaScript comes with some "built-in" functions that will allow us to access and update these nodes. We can call on these functions using dot notation. These functions are no different than the functions we just covered, but they are more commonly known as **methods**.
+
+Let's take a look at some of the methods we have available to us!
+
+
+#Manipulating the DOM
 
 ##Accessing Elements
 
-First things first! Before we can do something with an element, we first need to *find* the DOM node that represents the element that we want to work with.
+First things first! Before we can work with an element, we first need to *find* the DOM node that represents the element that we want to work with.
 
 In order to find an element, we need to search through the document for that element. The syntax for searching for an element looks something like this:
 
