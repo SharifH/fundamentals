@@ -1,9 +1,8 @@
-1. How would I find the second element on the page that has a `class` of `special`?
-
-(User will type answer)
-
-
-
+1. Which of the following could you use to find the second element on the page that has a `class` of `special`?
+A. document.querySelector('.special')
+B. document.querySelectorAll('.special')
+C. document.getElementById('special')
+D. document.querySelectorAll('.special')[1]
 
 
 2. What will the following code do?
@@ -24,8 +23,10 @@ D. Select the last list item on the page.
 <center><img src="../assets/chapter5/quiz_3.png"></center>
 <br>
 
-(User will type answer)
-
+A. <p>It will be the last door on your <em>left</em></p>
+B. It will be the last door on your <em>left</em>
+C. <li>It will be the last door on your <em>left</em></li>
+D. <p>It will be the last door on your left</p>
 
 
 4. What does 'blur' indicate?
