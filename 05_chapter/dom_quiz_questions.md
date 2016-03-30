@@ -21,7 +21,7 @@ D. Select the last list item on the page.
 
 3. What will the element that gets appended to the page look like?
 <br>
-<center><img src="../assets/chapter5/quiz_1.png"></center>
+<center><img src="../assets/chapter5/quiz_3.png"></center>
 <br>
 
 (User will type answer)
