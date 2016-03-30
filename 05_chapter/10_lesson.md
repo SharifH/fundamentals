@@ -25,8 +25,6 @@ newListItem.textContent = 'Feed the cat';
 
 // And Finally...let's add that list item as a child of the ul.
 document.getElementsByTagName('ul')[0].appendChild(newListItem);
-
-
 ```
 <br>
 <center><img src="../assets/chapter5/append_child.png"></center>

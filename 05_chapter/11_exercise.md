@@ -12,6 +12,8 @@ Let's get some practice manipulating the DOM and adding some interactions to our
 
 **Let's get started!**
 
+* Let's add another book to our list! Use `createElement()`, `appendChild()`, `textContent` to add a fifth `<li>` that has the text 'On the Road'.
+
 * We've finished reading *Me Talk Pretty One Day* and *A Visit From the Goon Squad*! Use the `getElementsByClassName()` to find all elements that have the `current` class. Then use a for loop to iterate through these elements and change the class name to `finished`.
 
 * Now onto our next book on the reading list, *The Flamethrowers*. Use the `getElementById()` method to find that list item. Update the class name to `current`. Then use the `removeAttribute()` method to remove the id attribute.
